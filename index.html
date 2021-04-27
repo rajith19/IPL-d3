@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>D3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.8/d3.min.js" type="text/JavaScript"></script>
+    <script src="https://d3js.org/topojson.v0.min.js"></script>
+    <script src="../js/cloud.js" type="text/JavaScript"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="parallax">
+            <header class="slide-top">WHERE <span>TALENT</span> MEETS <span>OPPORTUNITY</span></header>
+            <h1 class="slide-bottom">Ipl on the go</h1>
+            <div class="container">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <a href="#slide1"><span class="text">Click Here!</span></a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="first"><a href="index.html"><img src="images/logo.png" alt="logo" width="130px"
+                            height="45px"></a></li>
+                <li><a href="#slide1">Home</a></li>
+                <li><a href="#slide2">Tree Diagram</a></li>
+                <li><a href="#slide3">Lollipop Chart</a></li>
+                <li><a href="#slide5">World Map</a></li>
+                <li><a href="#slide4">Word Cloud</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="slide1" class="slide">
+                <h2 class="black">Welcome to IPL Zone</h2>
+                <div class="section-title-divider"></div>
+                <div class="flex">
+                    <div class="w-1/2 paddingleft flex flex-col justify-center">
+                        <h3>Twenty20 <span class="h3Span">Cricket</span></h3>
+                        <h4>Contested by eight teams based out of eight different Indian cities.</h4>
+                        <p>The Indian Premier League (IPL) is a Twenty-20 cricket tournament league established with the
+                            objective of promoting cricket in India and thereby nurturing <span>young and talented
+                                players.</span> </p>
+                        <ul>
+                            <li><img src="images/tick.png" alt="tick">World-Class Players Playing Against Each Other
+                            </li>
+                            <li><img src="images/tick.png" alt="tick"> Legends to Young Blood</li>
+                            <li><img src="images/tick.png" alt="tick"> Indeed a Gentleman’s Games</li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2"><img
+                            src="https://res.cloudinary.com/rajith/image/upload/v1618853836/212-2122469_virat-kohli-rcb-png-clipart_kcexac.png"
+                            alt="diogo" width="600"></div>
+                </div>
+            </section>
+            <section class="slide">
+                <div class="w-1/2 backgroundImage flex items-center justify-center"><img
+                        src="https://res.cloudinary.com/rajith/image/upload/v1618855915/1597139599_xfqt9u.png"
+                        alt="fitness">
+                </div>
+
+                <div class="w-1/2  paddingTopBottom">
+                    <div class="flex paddingLeftRight">
+                        <div class="pr-4">
+                            <img src="https://res.cloudinary.com/rajith/image/upload/v1618856471/cricket_1_umkkno.png"
+                                alt="weightlifter" width="40" height="40">
+                        </div>
+
+                        <div class="flex flex-col">
+                            <h3>NO STRINGS ATTACHED</h3>
+                            <p>We can easily support and cheer for our favorite players regardless which Nation he is
+                                from . Naturally we cannot support Brett Lee, AB De Villiers when they are playing
+                                against India even though they are our favourite . Here when we talk about IPL , keeping
+                                aside supporting our cities we get a chance to support and idolize our favourite
+                                players.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex paddingLeftRight ">
+                        <div class="pr-4">
+                            <img src="https://res.cloudinary.com/rajith/image/upload/v1618856471/trophy_msjvyy.png"
+                                alt="weightlifter" width="40" height="40">
+                        </div>
+
+                        <div class="flex flex-col">
+                            <h3>SHOWBIZZ</h3>
+                            <p>IPL is more of a bollywood movie than cricket. The involvement of Bollywood and the
+                                biggest Industrialists with IPL just adds onto the popularity of the tournament. The TV
+                                telecasters are willing to pay whooping sums for rights keeping in mind the spotlight
+                                they will get by being a part of IPL. </p>
+                        </div>
+                    </div>
+
+
+                    <div class="flex paddingLeftRight">
+                        <div class="pr-4">
+                            <img src="https://res.cloudinary.com/rajith/image/upload/v1618856471/cricket_xdyjce.png"
+                                alt="weightlifter" width="40" height="40">
+                        </div>
+
+                        <div class="flex flex-col">
+                            <h3>GLAMOUR</h3>
+                            <p>IPL is not only about cricket, its about being in the limelight. Again the involvement of
+                                bollywood celebrities and industrialists investing money on the teams capture a lot of
+                                media, from the after parties to hookups and on-field disagreements every move that they
+                                make become a large issue just like the film stars. And not to forget the GRAND IPL
+                                Openings!!</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+            <section id="subscribe">
+                <h2 class="text-center relative white">“If you can stay positive in a negative situation you
+                    win.”<br><span style="font-size:16px">- Virat Kohli</span></h2>
+            </section>
+
+            <section id="slide2" class="slide">
+                <h2 class="black">Tree Diagram</h2>
+                <div class="section-title-divider"></div>
+                <p class="black">This diagram summarizes each team's top bowlers in the year 2020.</p>
+                <div style="position: relative;">
+                    <svg id="treemap" style="width:1000px; height:500px; border:2px black solid">
+                    </svg>
+                </div>
+            </section>
+
+
+
+            <section id="slide3" class="slide">
+                <h2 class="black">Lollipop Chart</h2>
+                <div class="section-title-divider"></div>
+                <p class="black">This graph summarizes the performance of the following batsmen in the years 2018, 2019, and 2020.</p>
+                <button onclick="update('var1')" class="btnstyle" id="focus">IPL 2018</button>
+                <button onclick="update('var2')" class="btnstyle" id="focus2">IPL 2019</button>
+                <button onclick="update('var3')" class="btnstyle" id="focus3">IPL 2020</button>
+                <!-- Create a div where the graph will take place -->
+                <div id="my_dataviz"></div>
+
+            </section>
+
+            <section id="slide5" class="slide">
+                <h2 class="black">World Chart</h2>
+                <div class="section-title-divider"></div>
+                <p class="black">This map depicts players from various teams from around the world. </p>
+                <div style="position: relative;">
+                    <svg id="worldchart" style="width:1000px; height:500px;border:1px solid #000">
+                    </svg>
+                </div>
+            </section>
+
+            <section id="slide4" class="slide last">
+                <h2 class="black mt-2">Word Cloud</h2>
+                <div class="section-title-divider"></div>
+                <p class="black">This cloud displays the names of a few players as well as their teams. </p>
+                <div id="viz">
+                    <svg id="wordCloud" style="width:800px;height:600px;"></svg>
+                    <div id="addHere">
+                        <img src="https://res.cloudinary.com/rajith/image/upload/v1618675769/IPL_pxq7wt.png" width="150"
+                            height="150" />
+                    </div>
+                </div>
+            </section>
+      
+            <a href="#wrapper"><button id="toTop" class="toTop-arrow show"></button></a>
+        </main>
+        <footer>
+            <div class="flex flex-col">
+                <div class="paddingBottom">Copyright &copy; 2021. All Rights Reserved</div>
+                <div class="credits">Powered by <a href="mailto:rvgopal3695@conestogac.on.ca">Rajith V Gopal</a></div>
+            </div>
+        </footer>
+    </div>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            document.getElementById("focus").focus();
+            document.getElementById("focus").active();
+        });
+
+        d3.json("data/treechart.json", (error, data) => {
+            if (error) {
+                console.log(error);
+            } else {
+                viz(data);
+            }
+        })
+
+        function viz(data) {
+            var fillScale = d3.scaleOrdinal()
+                .range(["#fcd88a", "#cf7c1c", "#93c464", "#dd33333"]);
+            var nestedData = d3.nest()
+                .key(d => d.parent)
+                .entries(data.IPL);
+            var packableData = {
+                id: "IPL 2020",
+                values: nestedData
+            };
+
+            var root = d3.hierarchy(packableData, d => d.values);
+
+
+            var treeChart = d3.tree();
+            treeChart.size([2000, 600])
+
+            var treeData = treeChart(root).descendants();
+
+            d3.select("svg#treemap")
+                .append("g")
+                .attr("id", "treeG")
+                .attr("transform", "translate(100,-750)")
+                .selectAll("g")
+                .data(treeData)
+                .enter()
+                .append("g")
+                .attr("class", "node")
+                .attr("transform", d => `translate(${d.y},${d.x})`);
+
+
+
+            d3.selectAll("g.node")
+                .append("circle")
+                .attr("r", d => 2 * (d.descendants().length + 10))
+                .style("fill", d => fillScale(d.depth))
+                .style("stroke", "white")
+                .style("stroke-width", "2px")
+                .on("mouseover", onCircle)
+                .on("mouseout", offCircle);
+
+            d3.selectAll("g.node")
+                .append("text")
+                .style("text-anchor", "middle")
+                .style("fill", "#4f442b")
+                .text(d => d.data.id || d.data.key || d.data.name)
+                .attr("y", 5)
+
+
+
+            d3.select("#treeG").selectAll("line")
+                .data(treeData.filter(d => d.parent))
+                .enter()
+                .insert("line", "g")
+                .attr("x1", d => d.parent.y)
+                .attr("y1", d => d.parent.x)
+                .attr("x2", d => d.y)
+                .attr("y2", d => d.x)
+                .style("stroke", "black");
+
+            treeZoom = d3.zoom()
+            treeZoom.on("zoom", zoomed)
+
+            d3.select("svg").call(treeZoom);
+
+            function zoomed() {
+                console.log("d3.event.transform.x", d3.event.transform.x)
+                d3.select("#treeG").attr("transform",
+                    `translate(${d3.event.transform.x + 100},${d3.event.transform.y - 700})`)
+            }
+
+
+
+
+            function onCircle() {
+                d3.select(this)
+                    .attr("r", d => 2 * (d.descendants().length + 12))
+
+                var check = d3.select(this.parentNode)
+                    .select("text")._groups[0][0].innerHTML;
+                console.log("text", check)
+
+                if (check != "MI" && check != "RCB" && check != "SRH" && check != "CSK" && check != "DD" && check != "RR" && check != "KXIP" && check != "IPL 2020") {
+                    d3.select(this)
+                        .style("fill", "#dd3333")
+                        .attr("r", d => 2 * (d.descendants().length + 12))
+                }
+
+                if (check != "MI" && check != "RCB" && check != "SRH" && check != "CSK" && check != "DD" && check != "RR" && check != "KXIP" && check != "IPL 2020") {
+                    console.log("if")
+                    d3.select(this.parentNode)
+                        .select("text")
+                        .attr("x", 120)
+                        .text(d => {
+                            if (d.data.name) {
+                                return d.data.name + " - " + d.data.wickets + " Wickets"
+                            } else {
+                                return d.data.id || d.data.key || d.data.name
+                            }
+                        })
+                        .style("font-weight", "700")
+                }
+
+            }
+
+            function offCircle() {
+                // console.log("d3", d3.select("this"));
+                d3.select(this)
+                    .style("fill", d => fillScale(d.depth))
+                    .attr("r", d => 2 * (d.descendants().length + 10));
+                d3.select(this.parentNode)
+                    .select("text")
+                    .attr("x", 0)
+                    .text(d => d.data.id || d.data.key || d.data.name)
+                    .style("font-weight", "normal")
+
+            }
+        }
+
+
+
+        // ----------------------------------------------
+
+        var projection = d3.geoMercator()
+            .center([30, 10])
+            .scale(200)
+            .rotate([0, 0]);
+
+        var svg = d3.select("#worldchart");
+
+        var path = d3.geoPath()
+            .projection(projection);
+
+        var g = svg.append("g");
+
+        // load and display the World
+        d3.json("data/world.json", function (error, topology) {
+
+            // load and display the cities
+            d3.csv("data/cities.csv", function (error, data) {
+                g.selectAll("circle")
+                    .data(data)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", function (d) {
+                        return projection([d.lon, d.lat])[0];
+                    })
+                    .attr("cy", function (d) {
+                        return projection([d.lon, d.lat])[1];
+                    })
+                    .attr("r", 5)
+                    .style("fill", "red")
+                    .style("cursor", "pointer")
+                    .on("mouseover", onPointer)
+                    .on("mouseout", offPointer);
+            });
+
+
+
+
+            g.selectAll("path")
+                .data(topojson.object(topology, topology.objects.countries)
+                    .geometries)
+                .enter()
+                .append("path")
+                .attr("d", path)
+        });
+
+        var zoom = d3.zoom()
+            .on("zoom", function () {
+                g.attr("transform",
+                    `translate(${d3.event.transform.x},${d3.event.transform.y})`);
+                g.selectAll("circle")
+                    .attr("d", path.projection(projection));
+                g.selectAll("path")
+                    .attr("d", path.projection(projection));
+
+            });
+
+        svg.call(zoom)
+
+
+        function onPointer(d) {
+            var parent = d3.select(this.parentNode);
+            d3.select(this).attr("r", 8)
+            parent.append("svg:image")
+                .attr("xlink:href", d.img)
+                .attr("width", "130px")
+                // .attr("height", "200px")
+                .attr("x", (projection([d.lon, d.lat])[0]))
+                .attr("y", projection([d.lon, d.lat])[1] + 10);
+
+
+        }
+
+        function offPointer() {
+
+            var parent = d3.select(this.parentNode);
+            d3.select(this).attr("r", 5)
+            d3.select("image").remove();
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // -------------------------------------------------------
+
+
+        var tooltip = d3.select("#my_dataviz").append("div")
+            .attr("class", "tooltip")
+            .style("height", "20px")
+            .style("margin-top", "10px")
+            .style("font-weight", "700")
+            .style("opacity", 0);
+
+        var margin = { top: 30, right: 30, bottom: 120, left: 60 },
+            width = 750 - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
+
+        var svg = d3.select("#my_dataviz")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+        // Initialize the X axis
+        var x = d3.scaleBand()
+            .range([0, 700])
+            .padding(1);
+        var xAxis = svg.append("g")
+            .attr("transform", "translate(0," + height + ")");
+
+        // Initialize the Y axis
+        var y = d3.scaleLinear()
+            .range([height, 0]);
+        var yAxis = svg.append("g")
+            .attr("class", "myYaxis")
+
+
+        function update(selectedVar) {
+
+            d3.csv("../data/lollipop.csv", function (data) {
+
+                x.domain(data.map(function (d) { return d.group; }));
+                xAxis.transition().duration(1000).call(d3.axisBottom(x)).selectAll("text")
+                    .attr("transform", "translate(-10,0)rotate(-45)")
+                    .style("text-anchor", "end")
+                    .style("font-size", "16px");
+
+
+                y.domain([0, d3.max(data, function (d) { return +d[selectedVar] })]);
+                yAxis.transition().duration(1000).call(d3.axisLeft(y));
+
+                var j = svg.selectAll(".myLine")
+                    .data(data)
+                j.enter()
+                    .append("line")
+                    .attr("class", "myLine")
+                    .merge(j)
+                    .transition()
+                    .duration(1000)
+                    .attr("x1", function (d) { return x(d.group); })
+                    .attr("x2", function (d) { return x(d.group); })
+                    .attr("y1", y(0))
+                    .attr("y2", function (d) { return y(d[selectedVar]); })
+                    .attr("stroke", "grey")
+
+
+                var u = svg.selectAll("circle")
+                    .data(data)
+                u.enter()
+                    .append("circle")
+                    .attr("class", "circleBasicTooltip")
+                    .merge(u)
+                    .transition()
+                    .duration(1000)
+                    .attr("cx", function (d) { return x(d.group); })
+                    .attr("cy", function (d) { return y(d[selectedVar]); })
+                    .attr("r", 8)
+                    .attr("fill", "#dd3333")
+                    .style("cursor", "pointer");
+
+
+                d3.selectAll(".circleBasicTooltip")
+                    .on("mouseover", function (d) {
+                        d3.select(this).attr("r", 20)
+                        circle = d3.select(this)
+                        tooltip.transition()
+                            .duration(20)
+                            .style("opacity", 1)
+                        tooltip.html(d.group + " scored " + d[selectedVar] + " runs");
+                    })
+                    .on("mouseout", function (d) {
+                        d3.select(this).attr("r", 8);
+                        circle = d3.select(this)
+                        tooltip.transition()
+                            .duration(20)
+                            .style("opacity", 0)
+                    })
+
+            })
+        }
+
+        // Initialize plot
+        update('var1')
+
+
+        // -------------------------------------------------
+
+
+        // -------------------------------------------------
+
+
+        d3.csv("../data/worddata.csv", dataViz);
+        function dataViz(data) {
+            var wordScale = d3.scaleLinear().domain([0, 50]).range([50, 80]);
+            d3.cloud()
+                .size([800, 600])
+                .words(data)
+                .rotate(d => d.text.length > 6 ? 0 : 90)
+                .fontSize(d => wordScale(d.frequency))
+                .on("end", draw)
+                .start();
+
+
+            function draw(words) {
+                var wordG = d3.select("svg#wordCloud").append("g")
+                    .attr("id", "wordCloudG").attr("transform", "translate(300,300)");
+
+                wordG.selectAll("text")
+                    .data(words)
+                    .enter()
+                    .append("text")
+                    .attr("class", "wordCld")
+                    .style("font-size", d => d.size - 10 + "px")
+                    .style("fill", function () {
+                        return "hsl(" + Math.random() * 360 + ",50%,50%)";
+                    })
+                    .transition()
+                    .duration(1000)
+                    .attr("text-anchor", "middle")
+                    .attr("transform", d => `translate(${[d.x + 50, d.y + 20]}) rotate(${d.rotate})`)
+                    .text(d => d.text);
+
+                d3.selectAll("text.wordCld")
+                    .on("mouseover", highlightRegion)
+                    .on("mouseout", unhighlightRegion);
+
+            }
+
+            function highlightRegion(d) {
+                // console.log("d", d)
+                d3.select(this)
+                    .attr("cursor", "pointer")
+                    .style("font-size", d => (d.size - 10 + 2) + "px")
+                    .style("fill", function () {
+                        return "hsl(" + Math.random() * 360 + ",100%,50%)";
+                    })
+                    .transition()
+                    .duration(1000);
+                d3.select('#addHere img').remove();
+                d3.select('#addHere')
+                    .append('img')
+                    .attr('src', d.team)
+                    .attr('width', 150)
+                    .attr('height', 150)
+            }
+
+            function unhighlightRegion(d) {
+                d3.select(this)
+                    .style("fill", function () {
+                        return "hsl(" + Math.random() * 360 + ",100%,50%)";
+                    })
+                    .style("font-size", d => d.size - 10 + "px").transition()
+                    .duration(1000);
+                d3.select('#addHere img').remove();
+                d3.select('#addHere')
+                    .append('img')
+                    .attr('src', "https://res.cloudinary.com/rajith/image/upload/v1618675769/IPL_pxq7wt.png")
+                    .attr('width', 150)
+                    .attr('height', 150)
+            }
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

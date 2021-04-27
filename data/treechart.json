@@ -1,0 +1,25 @@
+{
+    "IPL": [
+    {"parent": "RCB", "name": "Chahal", "wickets" : "21"},
+    {"parent": "RCB", "name": "Morris", "wickets" : "11"},
+    {"parent": "RCB", "name": "Siraj" , "wickets" : "11"},
+    {"parent": "CSK", "name": "Chahar" , "wickets" : "12"},
+    {"parent": "CSK", "name": "Thakur" , "wickets" : "10"},
+    {"parent": "CSK", "name": "Dwayne" , "wickets" : "06"},
+    {"parent": "SRH", "name": "Rashid" , "wickets" : "20"},
+    {"parent": "SRH", "name": "Sharma" , "wickets" : "14"},
+    {"parent": "SRH", "name": "Vijay" , "wickets" : "5"},
+    {"parent": "MI", "name": "Bumrah" , "wickets" : "27"},
+    {"parent": "MI", "name": "Boult" , "wickets" : "25"},
+    {"parent": "MI", "name": "Chahar" , "wickets" : "15"},
+    {"parent": "DD", "name": "Rabada" , "wickets" : "30"},
+    {"parent": "DD", "name": "Nortje" , "wickets" : "22"},
+    {"parent": "DD", "name": "Ashwin" , "wickets" : "13"},
+    {"parent": "RR", "name": "Archer" , "wickets" : "20"},
+    {"parent": "RR", "name": "Shreyas" , "wickets" : "10"},
+    {"parent": "RR", "name": "Tyagi" , "wickets" : "9"},
+    {"parent": "KXIP", "name": "Shami" , "wickets" : "20"},
+    {"parent": "KXIP", "name": "Murugan" , "wickets" : "10"},
+    {"parent": "KXIP", "name": "Jordan" , "wickets" : "9"}
+    ]
+    }
